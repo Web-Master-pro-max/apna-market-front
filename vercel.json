@@ -74,6 +74,10 @@
       "dest": "/seller.html"
     },
     {
+      "src": "/img",
+      "dest": "/img"
+    },
+    {
       "src": "/sell",
       "dest": "/sell.html"
     },
