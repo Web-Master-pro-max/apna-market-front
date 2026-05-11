@@ -2,8 +2,16 @@
   "outputDirectory": ".",
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/$1"
+      "source": "/api/(.*)",
+      "destination": "http://13.62.153.215:5000/api/$1"
+    },
+    {
+      "source": "/:path*/",
+      "destination": "/:path*/index.html"
+    },
+    {
+      "source": "/:path",
+      "destination": "/:path.html"
     }
   ],
   "headers": [
