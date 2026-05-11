@@ -1,5 +1,5 @@
 // API Configuration - Update this to your backend URL
-const API_URL = 'http://13.62.153.215:5000/api';
+const API_URL = '/api';
 
 let token = localStorage.getItem('token');
 let currentUser = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
