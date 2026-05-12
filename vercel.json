@@ -97,7 +97,7 @@
     {
       "src": "/(.*)",
       "dest": "/$1.html"
-    }
+    },
       {
       "src": "/img",
       "dest": "/img"
