@@ -201,7 +201,7 @@
             top: 65px;
             left: 0;
             height: calc(100vh - 65px);
-            background: rgba(0, 0, 0, 0.568);
+            background: rgba(0, 0, 0, 0.267);
             backdrop-filter: blur(12px);
             border-right: 1px solid rgba(0, 0, 0, 0.05);
             padding: 1.5rem 0;
@@ -248,7 +248,7 @@
         }
 
         .mode-option.active {
-            background: #008C8C;
+            background: #008c8c;
             color: white;
             box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
         }
@@ -268,7 +268,7 @@
             gap: 12px;
             padding: 0.7rem 1rem;
             border-radius: 1rem;
-            color: #1e293b;
+            color: #d1def3;
             text-decoration: none;
             font-weight: 500;
             transition: 0.2s;
@@ -277,7 +277,7 @@
 
         .sidebar-menu li a i {
             width: 24px;
-            color: #5b6e8c;
+            color: #03dada;
         }
 
         .sidebar-menu li a:hover,
@@ -574,6 +574,13 @@
         .posts-grid {
             display: grid;
             gap: 1rem;
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 900px) {
+            .posts-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
         }
 
         .post-card-modern {
@@ -677,7 +684,7 @@
         
         .products-grid-modern {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(160px, fr));
             gap: 1rem;
         }
 
@@ -1011,8 +1018,8 @@
     let carouselBanners = [
         { image: 'img/1.jpeg', title: '', subtitle: '' },
         { image: 'img/2.jpeg', title: '', subtitle: '' },
-        { image: 'img/banner3.jpg', title: 'Give a good poster🤬', subtitle: '' },
-        { image: 'img/banner4.jpg', title: 'Make with ai bro but give good one that looks good here😑', subtitle: '' }
+        { image: 'img/3.jpeg', title: '', subtitle: '' },
+        { image: 'img/4.jpeg', title: '', subtitle: '' }
     ];
 
     function initCarousel() {
