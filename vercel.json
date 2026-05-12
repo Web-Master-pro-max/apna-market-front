@@ -14,7 +14,7 @@
       "use": "@vercel/static"
     },
     {
-      "src": "img/(.*)",
+      "src": "img/**/*",
       "use": "@vercel/static"
     }
   ],
@@ -36,6 +36,10 @@
     {
       "src": "/socket.io/(.*)",
       "dest": "http://13.62.153.215:5000/socket.io/$1"
+    },
+      {
+      "src": "/img/(.*)",
+      "dest": "/img/$1"
     },
     {
       "src": "/products",
@@ -77,10 +81,7 @@
       "src": "/seller",
       "dest": "/seller.html"
     },
-    {
-      "src": "/img",
-      "dest": "/img"
-    },
+  
     {
       "src": "/sell",
       "dest": "/sell.html"
