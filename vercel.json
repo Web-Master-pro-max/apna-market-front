@@ -37,11 +37,7 @@
       "src": "/socket.io/(.*)",
       "dest": "http://13.62.153.215:5000/socket.io/$1"
     },
-      {
-      "src": "/img/(.*)",
-      "dest": "/img/$1"
-    },
-    {
+   {
       "src": "/products",
       "dest": "/products.html"
     },
@@ -101,6 +97,18 @@
     {
       "src": "/(.*)",
       "dest": "/$1.html"
+    }
+      {
+      "src": "/img",
+      "dest": "/img"
+    },
+     {
+      "src": "/css",
+      "dest": "/css"
+    },
+    {
+      "src": "/js",
+      "dest": "/js"
     }
   ]
 }
