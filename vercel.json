@@ -1,11 +1,18 @@
 {
   "version": 2,
   "builds": [
-    { "src": "*.html", "use": "@vercel/static" },
-    { "src": "*.css", "use": "@vercel/static" },
-    { "src": "*.js", "use": "@vercel/static" },
-    { "src": "img/**/*", "use": "@vercel/static" },
-    { "src": "images/**/*", "use": "@vercel/static" }
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.js",
+      "use": "@vercel/static"
+    }
   ],
   "routes": [
     {
@@ -25,10 +32,6 @@
     {
       "src": "/socket.io/(.*)",
       "dest": "http://13.62.153.215:5000/socket.io/$1"
-    },
-    {
-      "src": "/(.*)\\.(css|js|png|jpg|jpeg|svg|ico|json|map|webp|avif|gif|ttf|woff2?|eot)",
-      "dest": "/$1.$2"
     },
     {
       "src": "/products",
@@ -69,6 +72,10 @@
     {
       "src": "/seller",
       "dest": "/seller.html"
+    },
+    {
+      "src": "/img",
+      "dest": "/img"
     },
     {
       "src": "/sell",
