@@ -1,6 +1,4 @@
-// API Configuration - Update this to your backend URL
-const API_URL = '/api';
-
+const API_URL = `${window.location.protocol}//${window.location.hostname}:${window.location.port}/api`;
 let token = localStorage.getItem('token');
 let currentUser = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
 
@@ -36,11 +34,11 @@ function setUserUI() {
     const logoutBtn = document.getElementById('logoutButton');
     const profileLink = document.getElementById('navProfile') || document.getElementById('nav-profile');
     const sellerLink = document.getElementById('navSeller');
+    const chatsLink = document.getElementById('navChats');
     const bottomPostBtn = document.getElementById('navBottomCreatePost');
     const adminLink = document.getElementById('navAdmin') || document.getElementById('nav-admin');
     const loginLink = document.getElementById('navLogin') || document.getElementById('nav-login');
     const sellerTools = document.getElementById('sellerTools');
-    
     if (currentUser) {
         if (userNameEl) {
             userNameEl.innerText = currentUser.name;
@@ -50,6 +48,9 @@ function setUserUI() {
         }
         if (profileLink) {
             profileLink.style.display = 'inline-flex';
+        }
+        if (chatsLink) {
+            chatsLink.style.display = 'inline-flex';
         }
         if (bottomPostBtn) {
             bottomPostBtn.style.display = currentUser.role === 'seller' ? 'flex' : 'none';
@@ -72,6 +73,9 @@ function setUserUI() {
         }
         if (profileLink) {
             profileLink.style.display = 'none';
+        }
+        if (chatsLink) {
+            chatsLink.style.display = 'none';
         }
         if (adminLink) {
             adminLink.style.display = 'none';
@@ -105,5 +109,6 @@ async function fetchJSON(url, options = {}) {
     return json;
 }
 
-// Call setUserUI when page loads
-document.addEventListener('DOMContentLoaded', setUserUI);
+document.addEventListener('DOMContentLoaded', () => {
+    setUserUI();
+});
