@@ -83,6 +83,14 @@
       "dest": "/live.html"
     },
     {
+      "src": "/chats",
+      "dest": "/chat-list.html"
+    },
+    {
+      "src": "/chat",
+      "dest": "/chat.html"
+    },
+    {
       "src": "/",
       "dest": "/index.html"
     },
